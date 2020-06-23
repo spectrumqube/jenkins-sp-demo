@@ -1,6 +1,7 @@
 pipeline {
     agent any
     stages {
+        // Build Stage
         stage('Build') {
             steps {
                 withMaven(maven: 'mvn-3.6.3') {
