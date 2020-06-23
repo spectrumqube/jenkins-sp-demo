@@ -10,7 +10,9 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'mvn test'
+                withMaven(maven: 'mvn-3.6.3') {
+                    sh 'mvn test'
+                }
             }
             post {
                 always {
